@@ -1,0 +1,71 @@
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.loading-line {
+  width: 0;
+  height: 4px;
+  background-color: #6b21a8;
+  animation: loading 2s infinite ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Container for image and overlay */
+.image-container {
+  position: relative;
+}
+
+/* Overlay that shows "Open Listing" text */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the overlay when the image is hovered */
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}

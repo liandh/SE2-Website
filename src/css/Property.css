@@ -1,0 +1,96 @@
+/*src\css\Property.css*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Image {
+    @apply w-[352px] h-[250px] left-0 top-0 absolute bg-[#130f26] rounded-tl-lg rounded-tr-lg;
+    object-fit: cover; /* Crop the image to fit the box */
+}
+
+.Favorited {
+    @apply w-12 h-12 left-[280px] top-[272px] absolute;
+}
+
+.Favorited .Ellipse {
+    @apply w-12 h-12 left-0 top-0 absolute bg-white rounded-full border border-[#e7e6f9];
+}
+
+.Favorited .Ellipse .Frame {
+    @apply w-6 h-6 px-[3px] pt-[5px] pb-[3.64px] left-[12px] top-[12px] absolute justify-center items-center inline-flex;
+}
+
+.Title {
+    @apply left-[24px] top-[322px] absolute text-[#000828] text-2xl font-bold leading-9;
+}
+
+.Price {
+    @apply text-[#7065f0] text-2xl font-extrabold leading-9 h-9 left-[24px] top-[282px] absolute justify-start items-end gap-0.5 inline-flex;
+}
+
+.Address {
+    @apply w-[284px] left-[24px] top-[356px] absolute opacity-50 text-[#000828] text-base font-normal leading-normal;
+}
+
+.Attributes {
+    @apply h-5 left-[24px] top-[372px] absolute justify-center items-start gap-4 inline-flex;
+}
+
+.Attribute-item {
+    @apply justify-center items-center gap-2 flex;
+}
+
+.Icon {
+    @apply w-5 h-5 px-[1.67px] py-[4.17px] justify-center items-center flex text-violet-700;
+}
+
+.Label {
+    @apply opacity-70 text-[#000828] text-sm font-normal leading-tight;
+}
+
+span {
+    @apply inline-flex h-14 items-center px-3 rounded-l-md border border-gray-300 bg-gray-50 text-gray-500 sm:text-sm ;
+  }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    background-color: #702cdc; /* Violet */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.pagination button:disabled {
+    background-color: #d1d5db; /* Gray */
+    cursor: not-allowed;
+}
+
+/* Container hover effect */
+.Rectangle392 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Rectangle392:hover {
+    transform: scale(1.02); /* Slightly scale up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Heart icon hover effect */
+.Frame .RiHeart3Line {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.Frame:hover .RiHeart3Line {
+    transform: scale(1.2); /* Scale up */
+    color: #ff0000; /* Change color to red */
+}
