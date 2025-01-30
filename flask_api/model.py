@@ -1,4 +1,33 @@
-#flask_api\model.py
+"""
+    ==================================================================================================
+            model.py
+                    - Uses Deep learning models (SimCLR, DeiT, CLIP, ResNet) 
+                    to extract features of images.
+
+            Main Responsibilities
+                    - Loads, initializes and uses SimCLR, DeiT, CLIP, and ResNet models
+                    - Extracts feature embeddings from property images.
+                    - Computes cosine similarity between image embeddings to find the most
+                    relevant matches.
+                    - Save and load extracted features for efficiency.
+
+            Key Components
+                    - Models: SimCLR, DeiT, CLIP, ResNet
+                    - Data Structures: Image feature embeddings (dictionary), PyTorch tensors
+                    - Algorithms: SimCLR, DeiT, CLIP, Cosine Similarity
+                    - Control Flow: Model loading -> Image transformation -> Feature extraction 
+                    -> Embedding saving/loading -> Similarity computation -> Ranked results.
+
+            Background
+                    - This project uses `app.py` (Flask API) and `model.py`.
+                    `app.py` handles API requests, while `model.py` processes deep learning models.
+
+            Programmer: Eliana Ojeda
+            Date: November 25, 2024
+            Revised: January 30, 2025
+
+    ====================================================================================================
+"""
 
 import torch
 import torch.nn as nn
@@ -10,7 +39,11 @@ from transformers import DeiTForImageClassification, CLIPModel, CLIPProcessor
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL import Image
 
-# Load SimCLR Model
+"""
+=============================================================================
+    SimCLR model
+=============================================================================
+"""
 class SimCLR(nn.Module):
     def __init__(self, base_model, out_dim):
         super(SimCLR, self).__init__()
@@ -26,12 +59,26 @@ class SimCLR(nn.Module):
         z = self.projection_head(h)
         return h, z
 
+
+
+"""
+=============================================================================
+    Load model
+=============================================================================
+"""
 def load_model(model_path, model):
-    model.load_state_dict(torch.load(model_path, map_location=torch.device('cuda' if torch.cuda.is_available() else 'cpu')))
+    model.load_state_dict(torch.load(model_path, 
+                                     map_location = torch.device('cuda' if torch.cuda.is_available() else 'cpu')))
     model.eval()  # Set to evaluation mode
     return model
 
-# Load models
+
+
+"""
+=============================================================================
+    Load Models
+=============================================================================
+"""
 def load_models():
     
     simclrmodel = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\flask_api\models\simclr_model1.pth"
@@ -51,7 +98,13 @@ def load_models():
 
     return simclr_model, deit_model, clip_model, clip_processor, base_cnn_model  # Return clip_processor
 
-# Image transform with data augmentation option
+
+
+"""
+=============================================================================
+    Image Transform with Data Augmentation Option
+=============================================================================
+"""
 def get_image_transform(augment=False):
     if augment:
         return transforms.Compose([
@@ -69,7 +122,12 @@ def get_image_transform(augment=False):
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
 
-# Feature extraction functions
+
+"""
+=============================================================================
+    Feature extraction functions
+=============================================================================
+"""
 def extract_features(model, processor, image, model_type, augment=False):
     with torch.no_grad():
         image_tensor = get_image_transform(augment)(image).unsqueeze(0)
@@ -86,7 +144,13 @@ def extract_features(model, processor, image, model_type, augment=False):
         elif model_type == 'base_cnn':
             return model(image_tensor).detach().cpu().numpy()
 
-# Load and save features
+
+
+"""
+=============================================================================
+    Load Feature File
+=============================================================================
+"""
 def load_features(filename):
     if os.path.exists(filename):
         with open(filename, 'rb') as f:
@@ -95,12 +159,24 @@ def load_features(filename):
         return features
     return {}
 
+
+"""
+=============================================================================
+    Save Features to File
+=============================================================================
+"""
 def save_features_to_file(features, filename):
     with open(filename, 'wb') as f:
         pickle.dump(features, f)
     print(f"Features saved to {filename}.")
 
-# Find most similar images
+
+
+"""
+=============================================================================
+    Find Most Similar Images
+=============================================================================
+"""
 def find_most_similar_image(uploaded_features, dataset_features):
     # Ensure dataset_features is not empty
     if not dataset_features:
@@ -109,8 +185,10 @@ def find_most_similar_image(uploaded_features, dataset_features):
     uploaded_features = uploaded_features.reshape(1, -1)  # Ensure shape is [1, feature_dim]
     
     # Flatten the features and ensure tensors are converted to NumPy arrays
-    dataset_features_array = np.array([feat.detach().cpu().numpy().flatten() if isinstance(feat, torch.Tensor) else np.array(feat).flatten() 
-                                      for feat in dataset_features.values()])  # Flatten all feature vectors
+    dataset_features_array = np.array([feat.detach().cpu().numpy().flatten() 
+                                       if isinstance(feat, torch.Tensor) 
+                                       else np.array(feat).flatten() 
+                                       for feat in dataset_features.values()])  # Flatten all feature vectors
 
     # Check if dataset_features_array is empty
     if dataset_features_array.size == 0:
@@ -127,7 +205,12 @@ def find_most_similar_image(uploaded_features, dataset_features):
 
     return most_similar
 
-# Load dataset features
+
+"""
+=============================================================================
+    Load dataset features
+=============================================================================
+"""
 def load_dataset_features(image_folder, model, model_type, feature_file, augment=False):
     features = load_features(feature_file)
     if features:
@@ -148,7 +231,11 @@ def load_dataset_features(image_folder, model, model_type, feature_file, augment
     save_features_to_file(features, feature_file)
     return features
 
-# Combining results from SimCLR, DeiT, and CLIP for better accuracy
+"""
+=============================================================================
+    Combining results from SimCLR, DeiT, and CLIP for better accuracy
+=============================================================================
+"""
 def combine_similarities(simclr_results, deit_results, clip_results, weights=[0.3, 0.4, 0.4]):
     combined_results = {}
     

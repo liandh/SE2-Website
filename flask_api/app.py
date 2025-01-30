@@ -1,4 +1,34 @@
-# flask_api/app.py
+"""
+    =============================================================================
+            app.py
+                    - Flask API that allows user to upload images 
+                    and find the most similar images
+
+            Main Responsibilities
+                    - Define API endpoints using Flask.
+                    - Accept image uploads and forward them to `model.py` for processing.
+                    - Retrieve and return similarity results.
+                    - Handle errors and exceptions in API requests.
+
+            Key Components
+                    - API: Flask endpoints for image uploads and similarity retrieval.
+                    - Data Structures: Flask request objects, JSON responses, uploaded image features (dictionary).
+                    - Processing: Image preprocessing/validation, calls to `model.py` for feature 
+                    extraction and similarity calculation.
+                    - Control Flow: Image upload -> Validation/Processing -> Feature extraction (via `model.py`) 
+                    -> Similarity computation -> Ranked results (JSON).
+
+            Background
+                    - This project uses `app.py` (Flask API) and `model.py`.
+                    `app.py` handles API requests, while `model.py` processes deep learning models.
+
+            Programmer: Eliana Ojeda
+            Date: November 28, 2024
+            Revised: January 30, 2025
+
+    =============================================================================
+"""
+
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
