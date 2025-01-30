@@ -1,17 +1,39 @@
+/*=============================================================================
+        BulkReverseImage.css
+                - Defines styles for the bulk reverse image search interface, 
+                  including form elements and interactive buttons.
+
+        Main Responsibilities
+                - Styles form layout for image search functionality.
+                - Provides consistent styling for headings and input fields.
+
+        Key Components
+                - Fieldset & Headings: Structured layout for bulk image search.
+                - Submit Button: Styled for primary action submission.
+        
+        Background
+                - This stylesheet is used in the Bulk Reverse Image Search 
+                  project to provide a user-friendly and accessible interface.
+
+        Programmer: Eliana Ojeda
+        Date: November 25, 2024
+        Revised: January 30, 2025
+
+=============================================================================*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 fieldset {
-  @apply mx-auto w-full max-w-[1000px] bg-violet-100 p-12 rounded-md;
+    @apply mx-auto w-full max-w-[1000px] bg-violet-100 p-12 rounded-md;
 }
 h2{
-  @apply mb-10 pb-3 block text-base text-left font-semibold text-4xl text-[#07074D];
+    @apply mb-10 pb-3 block text-base text-left font-semibold text-4xl text-[#07074D];
 }
 input[type=submit] {
-  @apply w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
+    @apply w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
 }
   
 .fraud-check-button {
-  @apply w-full rounded-md bg-[#2d2a6c] mt-5 py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
+    @apply w-full rounded-md bg-[#2d2a6c] mt-5 py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
 }
