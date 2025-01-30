@@ -1,3 +1,28 @@
+/*=============================================================================
+        PostListingForm.css
+                - Defines styles for form elements, file upload components, and 
+                  container layouts used in property-related forms.
+
+        Main Responsibilities
+                - Uses Tailwind CSS for consistent and responsive form styling.
+                - Styles input fields, text areas, select dropdowns, and buttons.
+                - Provides focus and hover effects for better user interaction.
+
+        Key Components
+                - Fieldset & Headings: Structures form sections with clear separation.
+                - Labels & Inputs: Improves readability and accessibility.
+                - Buttons & Interactive Elements: Includes hover and focus effects.
+                - Dropzone Styling: Customizes the file upload area.
+
+        Background
+                - This stylesheet is used in conjunction with form components 
+                  for property submissions and file uploads.
+
+        Programmer: Eliana Ojeda
+        Date: November 25, 2024
+        Revised: January 30, 2025
+
+=============================================================================*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
