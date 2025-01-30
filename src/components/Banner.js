@@ -1,4 +1,35 @@
-// src/components/Banner.js
+/*
+ *  =============================================================================
+ *  Banner.js
+ *  - Displays a hero banner with a welcome message, search bar, and image search option.
+ *
+ *  Purpose
+ *  - This component renders the main banner section of the website, typically at the top of the page.
+ *  - It includes a background image, a welcoming message, a search bar for property searches, and a camera icon that navigates to the image search page.
+ *
+ *  Functionality
+ *  - Manages the search term state using `useState`.
+ *  - Accesses the global search handler function (`handleSearch`) from the `HouseContext`.
+ *  - Triggers the search functionality whenever the input in the search bar changes.
+ *  - Handles navigation to the image search page when the camera icon is clicked.
+ *  - Includes a `Search` component (presumably for advanced search options).
+ *
+ *  Styling
+ *  - Uses Tailwind CSS classes for styling.
+ *
+ *  Dependencies
+ *  - React, useState, useContext
+ *  - react-router-dom (useNavigate)
+ *  - react-icons (FaCamera)
+ *  - ./HouseContext (HouseContext)
+ *  - ./Search (Search component)
+ *
+ *  Author: Eliana Ojeda
+ *  Date: January 28, 2025
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';

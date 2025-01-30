@@ -1,4 +1,32 @@
-//src\components\PostPropertyForm.js
+/*
+ *  =============================================================================
+ *  PostPropertyForm.js
+ *  - A form for users to submit their property details for listing.
+ *
+ *  Purpose
+ *  - This component renders a form that allows users to input information about their
+ *    property (title, type, price, address, etc.) and upload images.
+ *  - It handles form submission and logs the data to the console.  (Note: In a real
+ *    application, this would typically send the data to a backend API.)
+ *
+ *  Functionality
+ *  - Manages the form state using `useState` hooks for each input field.
+ *  - Handles form submission, preventing default behavior and logging the form data
+ *    to the console.
+ *  - Allows users to select multiple images for upload.
+ *
+ *  Styling
+ *  - Uses a combination of Tailwind CSS classes and potentially custom CSS for styling.
+ *
+ *  Dependencies
+ *  - React, { useState }
+ *
+ *  Author: Allysa Saymo
+ *  Date: November 10, 2024 
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useState } from "react";
 

@@ -1,4 +1,37 @@
-//src\components\CountryDropdown.js
+/*
+ *  =============================================================================
+ *  CountryDropdown.js
+ *  - A dropdown component for selecting a country/location.
+ *
+ *  Purpose
+ *  - This component provides a user interface for selecting a country or location from a list.
+ *  - It uses a dropdown menu to display the available options and updates the selected country 
+ *    in the global context.
+ *
+ *  Functionality
+ *  - Manages the open/closed state of the dropdown using `useState`.
+ *  - Accesses the `country`, `setCountry`, and `countries` values from the `HouseContext`.
+ *  - Updates the selected country in the context when an option is chosen.
+ *  - Includes a "(any)" option to reset the country selection.
+ *  - Visually highlights the currently selected country.
+ *
+ *  Styling
+ *  - Uses custom CSS classes (likely defined in a separate CSS file).
+ *  - Leverages React Icons for visual elements (map pin, arrows).
+ *  - Uses Headless UI's `Menu` component for dropdown functionality.
+ *
+ *  Dependencies
+ *  - React, useState, useContext
+ *  - react-icons (RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine)
+ *  - @headlessui/react (Menu)
+ *  - ./HouseContext (HouseContext)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useState, useContext } from 'react';
 import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';

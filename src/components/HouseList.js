@@ -1,4 +1,38 @@
-// src/components/HouseList.js
+/*
+ *  =============================================================================
+ *  HouseList.js
+ *  - Displays a paginated list of house/property components.
+ *
+ *  Purpose
+ *  - This component fetches house data from the `HouseContext` and renders it as a paginated grid of `House` components.
+ *  - It handles pagination logic, displaying a limited number of houses per page and providing navigation controls.
+ *
+ *  Functionality
+ *  - Accesses the `houses` array and `loading` state from the `HouseContext`.
+ *  - Implements pagination using `useState` to track the current page.
+ *  - Calculates the houses to display on the current page.
+ *  - Uses `useEffect` to update the URL query parameters with the current page number for shareable links.
+ *  - Renders a loading spinner while data is being fetched.
+ *  - Displays a message if no houses are found.
+ *  - Maps over the current page's houses and renders a `House` component for each.
+ *  - Provides "Previous" and "Next" buttons for navigating between pages.
+ *
+ *  Styling
+ *  - Uses Tailwind CSS classes for styling.
+ *
+ *  Dependencies
+ *  - React (useContext, useState, useEffect)
+ *  - react-icons (ImSpinner2)
+ *  - react-router-dom (useLocation, useNavigate)
+ *  - ./HouseContext (HouseContext)
+ *  - ./House (House component)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024 
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useContext, useState, useEffect } from 'react';
 import { HouseContext } from "./HouseContext";

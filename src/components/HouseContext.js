@@ -1,4 +1,37 @@
-//src\components\HouseContext.js
+JavaScript
+
+/*
+ *  =============================================================================
+ *  HouseContextProvider.js
+ *  - Provides a context for managing and filtering house data.
+ *
+ *  Purpose
+ *  - This component acts as a provider for the HouseContext, making house data and related functions available to other components in the application.
+ *  - It fetches house data from a CSV file, manages filtering based on criteria like country, price, property type, and search term, and provides access to this data and filtering logic through the context.
+ *
+ *  Functionality
+ *  - Fetches house data from 'metadata.csv' using `papaparse` on component mount.
+ *  - Initializes state for houses, filtered houses, selected country, price range, property type, loading status, available countries, and available property types.
+ *  - Provides functions for handling search input (`handleSearch`) and filtering houses based on selected criteria (`handleClick`).
+ *  - Updates the filtered houses based on the search term and selected filters.
+ *  - Makes the filtered house data, loading state, filtering functions, and filter options available through the HouseContext.
+ *
+ *  Dependencies
+ *  - React (useState, useEffect, createContext)
+ *  - papaparse
+ *
+ *  Context
+ *  - HouseContext: Provides access to house data, loading state, filtering functions, and filter options to consuming components.
+ *
+ *  Data Source
+ *  - 'metadata.csv'
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024 
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useState, useEffect, createContext } from 'react';
 import Papa from 'papaparse';

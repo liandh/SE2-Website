@@ -1,3 +1,33 @@
+/*
+ *  =============================================================================
+ *  MultiPeopleList.js
+ *  - Implements a multi-select combobox for assigning people using Headless UI.
+ *
+ *  Purpose
+ *  - This component provides a user interface for selecting multiple people from a list.
+ *  - It uses the Headless UI Combobox component to create a customizable and accessible multi-select dropdown.
+ *
+ *  Functionality
+ *  - Manages the search query state using `useState`.
+ *  - Manages the list of actively selected persons using `useState`.
+ *  - Filters the displayed options based on the search query.
+ *  - Allows adding and removing people from the active selection.
+ *  - Submits the selected people (currently logs to console).
+ *
+ *  Styling
+ *  - Uses Tailwind CSS classes for styling.
+ *
+ *  Dependencies
+ *  - React, useState
+ *  - @headlessui/react (Combobox)
+ *
+ *  Author: [Your Name] // Replace with your name
+ *  Date: [Date Created] // Replace with the creation date
+ *  Revised: [Date Last Modified] // Update as needed
+ *
+ *  =============================================================================
+ */
+
 import { Combobox } from '@headlessui/react'
 import { useState } from 'react'
 

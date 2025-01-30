@@ -1,4 +1,40 @@
-// src/components/House.js
+/*
+ * =============================================================================
+ * House.js
+ * - Displays a card representing a single property listing.
+ *
+ * Purpose
+ * - This component renders a card-like representation of a house or property, 
+ *   including its image, title, location, and price. It's designed to be used within
+ *   a list or grid to display multiple properties.
+ *
+ * Functionality
+ * - Receives property data as a prop (`house`).
+ * - Truncates long titles for display.
+ * - Splits comma-separated image paths into an array.
+ * - Implements image pagination to display a limited number of images at a time.
+ * - Renders the property card with a link to the detailed listing page.
+ * - Includes a "favorite" icon.
+ * - Handles image loading errors by displaying a placeholder image.
+ *
+ * Styling
+ * - Uses custom CSS from `Property.css`.
+ *
+ * Dependencies
+ * - React, useState
+ * - react-icons (RiHeart3Line)
+ * - react-router-dom (Link)
+ *
+ * Props
+ * - `house`: An object containing the property details (image_paths, title, price, location, post_url).
+ * - `index`: The index of the house in the list (used for linking to the detail page).
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024 
+ *  Revised: January 30, 2025
+ *
+ * =============================================================================
+ */s
 
 import React, { useState } from 'react';
 import "../css/Property.css";

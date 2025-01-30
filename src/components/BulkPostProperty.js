@@ -1,3 +1,37 @@
+/*
+ * =============================================================================
+ * BulkPostProperty.js (RealEstateListingForm.js)
+ * - Component for uploading a CSV file of real estate listings for bulk posting.
+ *
+ * Purpose
+ * - This component provides a form for users to upload a CSV file containing 
+ *   multiple real estate listings. It handles file selection, submission, and 
+ *   (currently) simulates the upload process.  It also has a placeholder for 
+ *   fraud checking functionality.
+ *
+ * Functionality
+ * - Manages the selected CSV file name using `useState`.
+ * - Handles file selection and validates that the chosen file is a CSV.
+ * - Simulates CSV upload on form submission.
+ * - Logs the submitted file name to the console.
+ * - Includes a placeholder for fraud checking (currently commented out).
+ * - Uses react-router-dom's useNavigate for potential navigation after submission.
+ *
+ * Styling
+ * - Uses custom CSS defined in `../css/BulkPostProperty.css`.
+ *
+ * Dependencies
+ * - React, { useState }
+ * - react-router-dom, { useNavigate }
+ * - ../css/BulkPostProperty.css
+ *
+ * Author: Allysa Saymo
+ * Date: December 5, 2024
+ * Revised: January 30, 2025
+ *
+ * =============================================================================
+ */
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/BulkPostProperty.css';

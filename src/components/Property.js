@@ -1,4 +1,35 @@
-//src\components\Property.js
+/*
+ *  =============================================================================
+ *  Property.js (House.js)
+ *  - Displays a card-like representation of a single property listing.
+ *
+ *  Purpose
+ *  - This component renders a card displaying key details of a property, including its image,
+ *    price, and location. It's designed for use within lists or grids of property listings.
+ *
+ *  Functionality
+ *  - Receives property data as a prop (`house`).
+ *  - Extracts relevant information (image paths, title, location, price) from the `house` prop.
+ *  - Renders the property details within a styled div, including an image, price, and location.
+ *  - Includes a heart icon for favoriting (though the functionality is not implemented in this snippet).
+ *
+ *  Styling
+ *  - Uses Tailwind CSS classes for styling.
+ *
+ *  Props
+ *  - `house`: An object containing the details of a single property.  This object is expected
+ *             to have properties such as `image_paths`, `title`, `location`, and `price`.
+ *
+ *  Dependencies
+ *  - React
+ *  - react-icons (RiHeart3Line)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React from 'react';
 import { RiHeart3Line } from "react-icons/ri";

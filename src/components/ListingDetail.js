@@ -1,4 +1,36 @@
-// src/components/ListingDetail.js
+/*
+ * =============================================================================
+ * ListingDetail.js
+ * - Displays detailed information for a single property listing.
+ *
+ * Purpose
+ * - This component fetches and displays details of a specific property, including images, title, price, location, and a link to the Facebook post.
+ * - It also provides image navigation through a carousel.
+ *
+ * Functionality
+ * - Retrieves the property ID from the URL parameters using `useParams`.
+ * - Accesses the list of properties from the `HouseContext` using `useContext`.
+ * - Finds the specific property based on the ID.
+ * - Manages the current image index for the carousel using `useState`.
+ * - Implements image navigation (next/previous).
+ * - Provides a "Back to Listings" link and a "View on Facebook" link.
+ *
+ * Styling
+ * - Uses custom CSS (ListingDetail.css) and Tailwind CSS for styling.
+ *
+ * Dependencies
+ * - React, { useContext, useState }
+ * - react-router-dom, { useParams, Link, useLocation }
+ * - ./HouseContext, { HouseContext }
+ * - ../css/ListingDetail.css
+ * - react-icons, { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaTag }
+ *
+ *  Author: Eliana Ojeda
+ *  Date: December 1, 2024 
+ *  Revised: January 30, 2025
+ *
+ * =============================================================================
+ */
 
 import React, { useContext, useState } from 'react';
 import { HouseContext } from './HouseContext';

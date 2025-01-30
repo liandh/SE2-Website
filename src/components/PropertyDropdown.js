@@ -1,4 +1,35 @@
-// src/components/PropertyDropdown.js
+/*
+ *  =============================================================================
+ *  PropertyDropdown.js
+ *  - A dropdown component for selecting a property type.
+ *
+ *  Purpose
+ *  - This component renders a dropdown menu that allows users to select a type of property (e.g., House, Condo, Apartment).
+ *  - It uses the Headless UI `Menu` component for accessibility and styling.
+ *  - The selected property type is managed using React's Context API through `HouseContext`.
+ *
+ *  Functionality
+ *  - Manages the open/closed state of the dropdown using `useState`.
+ *  - Accesses the `property` state and `setProperty` function from `HouseContext`.
+ *  - Provides a default option ("Property type (any)") and a list of property types.
+ *  - Updates the `property` state in `HouseContext` when an option is selected.
+ *  - Visually indicates the selected option using styling.
+ *
+ *  Styling
+ *  - Uses custom CSS classes (`dropdown`, `dropdown-btn`, `dropdown-icon-primary`, `dropdown-icon-secondary`, `dropdown-menu`) likely defined in a separate CSS file.
+ *
+ *  Dependencies
+ *  - React, useState, useContext
+ *  - react-icons (RiHome5Line, RiArrowDownSLine, RiArrowUpSLine)
+ *  - @headlessui/react (Menu)
+ *  - ./HouseContext (HouseContext)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
 
 import React, { useState, useContext } from 'react';
 import { RiHome5Line, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';

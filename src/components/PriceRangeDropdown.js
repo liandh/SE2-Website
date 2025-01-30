@@ -1,4 +1,36 @@
-//src\components\PriceRangeDropdown.js
+/*
+ *  =============================================================================
+ *  PriceRangeDropdown.js
+ *  - Provides a dropdown menu for selecting a price range for property searches.
+ *
+ *  Purpose
+ *  - This component renders a dropdown menu that allows users to filter properties based on a predefined price range.
+ *  - It uses the Headless UI `Menu` component for accessibility and customizability.
+ *
+ *  Functionality
+ *  - Manages the open/closed state of the dropdown using `useState`.
+ *  - Accesses and updates the selected price range using the `HouseContext`.
+ *  - Renders a list of price range options from a predefined array.
+ *  - Visually indicates the currently selected price range.
+ *
+ *  Styling
+ *  - Uses custom CSS classes (likely defined in a separate CSS file or styled-components) for styling the dropdown.  Tailwind CSS classes are also used.
+ *
+ *  Dependencies
+ *  - React, useState, useContext
+ *  - react-icons (RiWallet3Line, RiArrowDownSLine, RiArrowUpSLine)
+ *  - @headlessui/react (Menu)
+ *  - ./HouseContext (HouseContext)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
+
+import React, { useState, useContext } from 'react';
+// ... rest of your code
 
 import React, { useState, useContext } from 'react';
 import { RiWallet3Line, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';

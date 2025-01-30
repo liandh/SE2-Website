@@ -1,3 +1,33 @@
+/*
+ *  =============================================================================
+ *  Header.js
+ *  - Renders the header section of the website, including navigation links.
+ *
+ *  Purpose
+ *  - This component displays the website's header, containing the logo and navigation links to different pages (Home, Sell, Resources, About Us).
+ *  - It dynamically styles the navigation links based on the current route using `NavLink` and `useLocation` from `react-router-dom`.
+ *
+ *  Functionality
+ *  - Uses `NavLink` components for navigation, providing active link styling.
+ *  - Employs `useLocation` to access the current route and apply specific styles to the "Home" link and other navigation links.
+ *  - Styles the "Home" link differently depending on whether it's the active link, or if the user is on the Sell, Resources, or About Us pages, or on any other page.
+ *  - Styles other navigation links (Sell, Resources, About Us) based on their active state.
+ *
+ *  Styling
+ *  - Uses Tailwind CSS classes for styling.
+ *
+ *  Dependencies
+ *  - React
+ *  - react-router-dom (NavLink, useLocation)
+ *
+ *  Author: Alleina Abad
+ *  Date: November 16, 2024 
+ *  Revised: January 30, 2025
+ *
+ *  =============================================================================
+ */
+
+
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom"; // Import NavLink and useLocation
 
