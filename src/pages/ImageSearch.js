@@ -1,4 +1,42 @@
-// src/pages/ImageSearch.js
+/*  
+ *    =============================================================================
+ *          ImageSearch.js 
+ *                  - Allows users to search for properties by uploading an image.
+ *
+ *          Purpose
+ *                  - This component provides an interface for image-based property search.
+ *                  - Users can upload an image, select a model, and view similar property listings.
+ *
+ *         Main Responsibilities:
+ *                  - Handles image uploads and stores the selected image.
+ *                  - Allows users to select a deep learning model for the search.
+ *                  - Sends the image and selected model to the backend API for processing.
+ *                  - Displays search results, including property titles fetched from metadata.csv.
+ *                     - Uses `papaparse` to parse the CSV data.
+ *                  - Provides a loading indicator and error handling.
+ *                     - Includes a "View Details" overlay on image hover.
+ *
+ *          Styling
+ *                  - Custom CSS (`ImageSearch.css`) is used for styling.
+ *
+ *          Dependencies
+ *                  - `react-router-dom` for navigation (`Link`).
+ *                  - `react-icons` for icons (`ImSpinner2`).
+ *                  - `papaparse` for CSV parsing.
+ *
+ *          API Endpoint
+ *                  - `http://127.0.0.1:5000/api/search-by-image`
+ *
+ *          Author: Eliana Ojeda
+ *          Date: December 2, 2024
+ *          Revised: January 30, 2025
+ *  
+ *    =============================================================================
+ */
+
+import React, { useState, useEffect } from "react";
+// ... rest of your code
+
 
 import React, { useState, useEffect } from "react";
 import '../css/ImageSearch.css';

@@ -1,10 +1,41 @@
-//src\pages\Resources.js
+/*  
+ *    =============================================================================
+ *          Resources.js 
+ *                  - Displays a page with helpful resources for real estate in the Philippines.
+ *
+ *          Purpose
+ *                  - This component renders the Resources page, providing links and information
+ *                    related to property listings, real estate guides, and useful websites.
+ * 
+ *          Sections
+ *                  - Property Listings: Links to online listing platforms, local agents, and 
+ *                    commercial property resources.
+ *                  - Real Estate Guides: Links to guides on buying, selling, and investing.
+ *                  - Helpful Links: Links to government resources, useful websites, location guides,
+ *                    and developer resources.
+ *
+ *          Styling
+ *                  - Tailwind CSS is used for styling the elements.
+ * 
+ *          Icons
+ *                  - React Icons library provides icons for visual appeal.
+ *
+ *          Author: Eliana Ojeda
+ *          Date: January 29, 2025
+ *          Revised: January 30, 2025
+ *  
+ *    =============================================================================
+ */
 
 import React from "react";
 import { FaSearch, FaMapMarkerAlt, FaBuilding, FaBookOpen, FaLink, FaHome, FaHandshake, FaChartLine } from "react-icons/fa";
 
 const ResourcesPage = () => {
+
+
   return (
+
+
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Hero Section */}
       <header
@@ -22,6 +53,8 @@ const ResourcesPage = () => {
           </p>
         </div>
       </header>
+
+
 
       {/* Property Listings Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white">
@@ -69,6 +102,8 @@ const ResourcesPage = () => {
         </div>
       </section>
 
+
+
       {/* Real Estate Guides Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto text-center">
@@ -104,6 +139,8 @@ const ResourcesPage = () => {
           </div>
         </div>
       </section>
+
+      
 
       {/* Helpful Links Section */}
       <section className="py-16 bg-gradient-to-r from-violet-700 to-indigo-800 text-white">

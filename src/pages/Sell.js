@@ -1,4 +1,28 @@
-//src\pages\Sell.js
+/*  
+ *    =============================================================================
+ *          Sell.js 
+ *                  - Provides a form for users to list their real estate properties.
+ *
+ *          Purpose
+ *                  - This component renders a form that allows users to input details about
+ *                    their property (title, type, price, address, etc.) and upload images.
+ *                  - It handles form submission and image uploads.
+ * 
+ *          Functionality
+ *                  - Manages form state using `useState` hooks.
+ *                  - Handles form submission, logging the entered data to the console.
+ *                  - Implements drag-and-drop and file input for image uploads.
+ *                  - Provides image previews for uploaded files.
+ *
+ *          Styling
+ *                  - Custom CSS (`PostListingForm.css`) is used for styling.
+ *
+ *          Author: Allysa Saymo
+ *          Date: November 10, 2024
+ *          Revised: January 30, 2025
+ *  
+ *    =============================================================================
+ */
 
 import React, { useState } from 'react';
 import '../css/PostListingForm.css';

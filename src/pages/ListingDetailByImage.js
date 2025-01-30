@@ -1,4 +1,35 @@
-// src/pages/ListingDetailByImage.js
+/*  
+ *    =============================================================================
+ *          ListingDetailByImage.js 
+ *                  - Displays details for a specific listing based on an image.
+ *
+ *          Purpose
+ *                  - This component fetches listing data from a CSV file (`metadata.csv`) 
+ *                    based on the provided image URL parameter and displays the details.
+ * 
+ *          Components
+ *                - None directly, but uses data fetched from the CSV.
+ * 
+ *          Data Handling
+ *                - Uses `papaparse` to parse the CSV data.
+ *                - Stores listing data in component state.
+ *
+ *          Routing
+ *                - Uses `react-router-dom`'s `useParams` to get the image URL from the route.
+ *                - Uses `useNavigate` for programmatic navigation (Back to Search).
+ *
+ *          Styling
+ *                - Custom CSS (`ListingDetail.css`) is used for styling.
+ *
+ *          Icons
+ *                - React Icons (`FaArrowLeft`, `FaArrowRight`, `FaMapMarkerAlt`) are used.
+ *
+ *          Author: Eliana Ojeda
+ *          Date: November 29, 2024
+ *          Revised: January 30, 2025
+ *  
+ *    =============================================================================
+ */
 
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';

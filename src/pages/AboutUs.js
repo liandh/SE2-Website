@@ -1,4 +1,30 @@
-//src\pages\AboutUs.js
+/*  
+ *    =============================================================================
+ *            AboutUs.js 
+ *                    - Displays information about the 91acres company.
+ *
+ *            Purpose
+ *                    - This component renders the "About Us" page, showcasing the company's
+ *                      mission, values, team members, and contact information. 
+ * 
+ *            Styling
+ *                    - Tailwind CSS is used for styling the elements.
+ * 
+ *            Icons
+ *                    - React Icons library provides icons for visual appeal.
+ *
+ *            Key Components:
+ *                     - Hero Section: Introduction with background image and title.
+ *                     - Mission/Values: Highlights the company's core principles.
+ *                     - Team: Introduces team members with photos and brief descriptions.
+ *                     - Contact: Provides contact details and a contact form.
+ * 
+ *            Author: Eliana Ojeda
+ *            Date: January 29, 2024
+ *            Revised: January 30, 2024     
+ *  
+ *    =============================================================================
+ */
 
 import React from "react";
 import { FaLightbulb, FaShieldAlt, FaHeart, FaPhoneAlt, FaEnvelope, FaHome,  FaPeopleCarry, FaUsers,   
