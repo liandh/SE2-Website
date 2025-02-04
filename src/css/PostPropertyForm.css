@@ -1,21 +1,44 @@
+/*=============================================================================
+        PostPropertyForm.css
+                - Defines styles for form elements used in property listings.
+
+        Main Responsibilities
+                - Uses Tailwind CSS for consistent and responsive form styling.
+                - Styles input fields, text areas, select dropdowns, and buttons.
+
+        Key Components
+                - Fieldset & Legend: Structures form sections with proper spacing.
+                - Labels & Inputs: Ensures readability and accessibility.
+                - Buttons & Interactive Elements: Enhances usability with hover effects.
+                - Layout & Positioning: Uses Tailwind utilities for styling consistency.
+
+        Background
+                - This stylesheet is used in conjunction with form components 
+                  for property submission or filtering.
+
+        Programmer: Eliana Ojeda
+        Date: November 25, 2024
+        Revised: January 30, 2025
+
+=============================================================================*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 fieldset {
-  @apply mx-auto w-full max-w-[550px] bg-white p-12;
+    @apply mx-auto w-full max-w-[550px] bg-white p-12;
 }
 legend {
-  @apply mb-3 block text-base font-medium text-2xl text-[#07074D];
+    @apply mb-3 block text-base font-medium text-2xl text-[#07074D];
 }
 label {
-  @apply mb-3 block text-base font-medium text-[#07074D];
+    @apply mb-3 block text-base font-medium text-[#07074D];
 }
 span {
-  @apply inline-flex h-14 items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm ;
+    @apply inline-flex h-14 items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm ;
 }
 #price {
-  @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
+    @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
 }
 input {
     @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
@@ -24,8 +47,8 @@ textarea {
     @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
 }
 select {
-  @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
+    @apply w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md;
 }
 input[type=submit] {
-  @apply w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
+    @apply w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none cursor-pointer
 }

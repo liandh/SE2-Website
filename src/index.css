@@ -1,3 +1,23 @@
+/*  
+ *    =============================================================================
+ *            index.css 
+ *                    - Global styles for the application, using Tailwind CSS for
+ *                      utility-first styling.
+ *
+ *            Purpose
+ *                    - This file applies global styles across the application, including 
+ *                      typography and layout settings.
+ * 
+ *            Key Components:
+ *                     - Tailwind CSS utilities are applied for consistent styling.
+ * 
+ *            Author: Alleina Abad
+ *            Date: November 16, 2024
+ *            Revised: January 31, 2025
+ *    =============================================================================
+ */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
