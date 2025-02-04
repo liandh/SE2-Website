@@ -34,7 +34,7 @@
  *  Revised: January 30, 2025
  *
  * =============================================================================
- */s
+ */
 
 import React, { useState } from 'react';
 import "../css/Property.css";
