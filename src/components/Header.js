@@ -40,8 +40,8 @@ const Header = () => {
 
     return (
         <header className="py-6 mb-0 border-b">
-            <div className="container mx-auto flex justify-between items-center font-bold text-gray-800">
-                <div className="flex justify-between items-center gap-6">
+            <div className="container bg-opacity-70 mx-auto flex justify-between items-center font-bold text-gray-800">
+                <div className="flex opacity-90 justify-between items-center gap-6">
                     <NavLink 
                         to="/" 
                         className={({ isActive }) =>
