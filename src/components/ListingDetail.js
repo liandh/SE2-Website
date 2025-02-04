@@ -36,7 +36,7 @@ import React, { useContext, useState } from 'react';
 import { HouseContext } from './HouseContext';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import "../css/ListingDetail.css";
-import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaTag } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt } from 'react-icons/fa';
 
 const ListingDetail = () => {
     const { houses } = useContext(HouseContext);
@@ -60,6 +60,10 @@ const ListingDetail = () => {
 
     const handlePrevImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    const handleThumbnailClick = (index) => {
+        setCurrentImageIndex(index); // Update the current image index
     };
 
     return (
@@ -102,12 +106,26 @@ const ListingDetail = () => {
             </div>
 
             {/* Image Carousel */}
-            <div className="carousel-container relative mb-6">
+            <div className="relative mb-6">
+                {/* Main Image */}
                 <img
                     src={`/${images[currentImageIndex]}`}
                     alt={`Listing Image ${currentImageIndex + 1}`}
                     className="full-image w-full h-auto rounded-lg shadow-md"
                 />
+
+                {/* Thumbnails Overlay */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    {images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={`/${image}`}
+                            alt={`Thumbnail ${index + 1}`}
+                            className={`w-16 h-16 object-cover rounded-lg cursor-pointer border-2 ${index === currentImageIndex ? 'border-violet-600 opacity-100' : 'border-transparent opacity-50'} hover:border-violet-600 hover:opacity-100 transition-all duration-300`}
+                            onClick={() => handleThumbnailClick(index)}
+                        />
+                    ))}
+                </div>
 
                 {/* Carousel Navigation Buttons */}
                 <button
