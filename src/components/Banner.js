@@ -53,27 +53,30 @@ const Banner = () => {
     };
 
     return (
-        <section className="h-full mb-8 xl:mb-8">
-            <div className={`banner-container relative w-full md:h-[645px] sm:h-[600px] rounded-xl bg-cover bg-center`}>
+        <section className="h-full mb-8 xl:mb-8 bg-gradient-to-b from-[#dfddf7] to-[#ffff]">
+            <div className={`banner-container relative w-full md:h-[700px] sm:h-[600px] rounded-xl bg-cover bg-center`}>
                 <img 
                     data-layer="Banner Image" 
-                    className="BannerImage w-[90%] max-h-[95%] sm:h-[600px] rounded-xl mx-auto object-cover" 
+                    className="BannerImage w-[90%] max-h-[95%] sm:h-full rounded-xl mx-auto object-cover" 
                     src="/Banner-Image.png" 
                     alt="Banner" 
                 />
                 <div className="absolute inset-0"></div> {/* Optional Overlay */}
-                <div data-layer="Headline" className="absolute inset-0 flex flex-col justify-center items-start gap-8 text-white mx-[10%] w-[30%]"> {/* items-start for left alignment */}
-                    <div data-layer="Buy, rent, or sell your property easily" className="md:text-6xl sm:text-4xl font-bold font-['Plus Jakarta Sans'] text-[#000828]">
+                <div data-layer="Headline" 
+                    className="absolute inset-0 flex flex-col justify-center items-start gap-8 text-white mx-[10%] w-[30%]"> {/* items-start for left alignment */}
+                    <div data-layer="Buy, rent, or sell your property easily" 
+                        className="lg:text-6xl md:text-4xl sm:text-5xl xs:text-3xl font-bold font-['Plus Jakarta Sans'] text-[#000828]">
                         Buy, rent, or sell your property easily
                     </div>
-                    <div data-layer="A great platform to buy, sell, or even rent your properties without any commisions." className="text-[#000828] md:text-2xl sm:text-md font-medium font-['Plus Jakarta Sans'] leading-loose">
+                    <div data-layer="A great platform to buy, sell, or even rent your properties without any commisions." 
+                        className="text-[#000828] lg:text-2xl md:text-xl sm:text-md font-medium font-['Plus Jakarta Sans'] leading-loose">
                         A great platform to buy, sell, or even rent your properties without any commisions.
                     </div>
                 </div>
                 {/* Search Box Overlay */}
                 {/* absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4 */}
-                <div className="">
-                    <div className="flex items-center rounded-lg overflow-hidden w-full max-w-[620px] bg-black bg-opacity-70 p-2">
+                <div className="absolute lg:top-[85%] sm:top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
+                    <div className="flex items-center rounded-lg overflow-hidden w-full md:max-w-[40%] sm:max-w-[90%] bg-black bg-opacity-70 p-2">
                         <input
                             type="text"
                             value={searchTerm}
