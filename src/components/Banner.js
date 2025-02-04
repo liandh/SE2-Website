@@ -53,25 +53,26 @@ const Banner = () => {
     };
 
     return (
-        <section className="h-full max-h-[640px] mb-8 xl:mb-8">
-            <div className="relative w-full h-[645px]">
+        <section className="h-full mb-8 xl:mb-8">
+            <div className={`banner-container relative w-full md:h-[645px] sm:h-[600px] rounded-xl bg-cover bg-center`}>
                 <img 
-                    src="/violetbg4.JPG"
-                    alt="Banner"
-                    className="w-full h-full object-cover"
+                    data-layer="Banner Image" 
+                    className="BannerImage w-[90%] max-h-[95%] sm:h-[600px] rounded-xl mx-auto object-cover" 
+                    src="/Banner-Image.png" 
+                    alt="Banner" 
                 />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 className="text-6xl font-bold leading-tight tracking-wide bg-gradient-to-l from-pink-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent" 
-                    style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-                        Welcome to 91acres
-                    </h1>
-                    <p className="text-2xl font-medium max-w-3xl mx-auto bg-gradient-to-r from-white to-white bg-clip-text text-transparent pl-10 lg:pl-20 xl:pl-40" 
-                    style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-                        Find your dream property today
-                    </p>
+                <div className="absolute inset-0"></div> {/* Optional Overlay */}
+                <div data-layer="Headline" className="absolute inset-0 flex flex-col justify-center items-start gap-8 text-white mx-[10%] w-[30%]"> {/* items-start for left alignment */}
+                    <div data-layer="Buy, rent, or sell your property easily" className="md:text-6xl sm:text-4xl font-bold font-['Plus Jakarta Sans'] text-[#000828]">
+                        Buy, rent, or sell your property easily
+                    </div>
+                    <div data-layer="A great platform to buy, sell, or even rent your properties without any commisions." className="text-[#000828] md:text-2xl sm:text-md font-medium font-['Plus Jakarta Sans'] leading-loose">
+                        A great platform to buy, sell, or even rent your properties without any commisions.
+                    </div>
                 </div>
                 {/* Search Box Overlay */}
-                <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
+                {/* absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4 */}
+                <div className="">
                     <div className="flex items-center rounded-lg overflow-hidden w-full max-w-[620px] bg-black bg-opacity-70 p-2">
                         <input
                             type="text"
