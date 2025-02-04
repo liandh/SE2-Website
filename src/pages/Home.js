@@ -20,18 +20,47 @@
  *    =============================================================================
  */
 
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import Banner from "../components/Banner"; 
 import HouseList from "../components/HouseList";
 
 const Home = () => {
-    return(
-        <div className="min-h-[1800px] ">
-            <Banner/> 
-            <HouseList/>
-        </div>
-    )
-}
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) { 
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-[1800px]">
+      <Banner />
+      <HouseList />
+      
+      {isScrolled && (
+        <button 
+            onClick={scrollToTop} 
+            className="fixed bottom-12 right-5 p-3 bg-purple-400 hover:bg-purple-700 text-white rounded-md shadow-md transition-all duration-300">
+            ↑ Back to Top
+        </button>
+      )}
+    </div>
+  );
+};
 
 export default Home;

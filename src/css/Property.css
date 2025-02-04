@@ -28,11 +28,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.Image {
-    @apply w-[352px] h-[250px] left-0 top-0 absolute bg-[#130f26] rounded-tl-lg rounded-tr-lg;
-    object-fit: cover; /* Crop the image to fit the box */
-}
-
 .Favorited {
     @apply w-12 h-12 left-[280px] top-[272px] absolute;
 }
@@ -47,6 +42,24 @@
 
 .Title {
     @apply left-[24px] top-[322px] absolute text-[#000828] text-2xl font-bold leading-9;
+    position: relative;
+    display: inline-block;
+}
+
+.Title:hover::after {
+    content: attr(data-fulltitle);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 14px;
+    pointer-events: none;
 }
 
 .Price {
@@ -83,8 +96,23 @@ span {
     margin-top: 10px;
 }
 
+.pagination span {
+    @apply inline-flex h-14 items-center px-3 rounded-l-md bg-gray-50 text-gray-500 sm:text-sm;
+    margin: 0;
+    border: none;
+}
+
+.pagination .pagination-box {
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+}
+
+.pagination input {
+    @apply px-2 py-1 w-16 text-center border border-gray-300 rounded-md;
+}
+
 .pagination button {
-    background-color: #702cdc; /* Violet */
+    background-color: #702cdc;
     color: white;
     padding: 5px 10px;
     border: none;
@@ -94,27 +122,43 @@ span {
 }
 
 .pagination button:disabled {
-    background-color: #d1d5db; /* Gray */
+    background-color: #d1d5db;
     cursor: not-allowed;
 }
 
-/* Container hover effect */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Image {
+    @apply w-[352px] h-[250px] left-0 top-0 absolute bg-[#130f26] rounded-tl-lg rounded-tr-lg;
+    object-fit: cover;
+    transition: object-fit 0.3s ease;
+}
+
+.image-container:hover .Image {
+    object-fit: contain;
+    object-position: center;
+}
+
 .Rectangle392 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Rectangle392:hover {
-    transform: scale(1.02); /* Slightly scale up */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Heart icon hover effect */
 .Frame .RiHeart3Line {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .Frame:hover .RiHeart3Line {
-    transform: scale(1.2); /* Scale up */
-    color: #ff0000; /* Change color to red */
-}
+    transform: scale(1.2);
+    color: #ff0000;
+

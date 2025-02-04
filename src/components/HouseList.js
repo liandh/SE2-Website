@@ -49,6 +49,8 @@ const HouseList = () => {
     const initialPage = parseInt(queryParams.get("page")) || 1;
 
     const [currentPage, setCurrentPage] = useState(initialPage);
+    const [isEditingPage, setIsEditingPage] = useState(false);
+    const [inputPage, setInputPage] = useState(currentPage);
     const housesPerPage = 9;
 
     const totalPages = Math.ceil(houses.length / housesPerPage);
@@ -59,6 +61,15 @@ const HouseList = () => {
     useEffect(() => {
         navigate(`?page=${currentPage}`);
     }, [currentPage, navigate]);
+
+    const handlePageChange = () => {
+        if (inputPage > 0 && inputPage <= totalPages) {
+            setCurrentPage(inputPage);
+        } else {
+            setInputPage(currentPage);
+        }
+        setIsEditingPage(false);
+    };
 
     if (loading) {
         return (
@@ -92,7 +103,35 @@ const HouseList = () => {
                     >
                         Previous
                     </button>
-                    <span>{` Page ${currentPage} of ${totalPages} `}</span>
+
+                    {/* Current Page with Input Option */}
+                    <span className="mx-2">
+                        {isEditingPage ? (
+                            <>
+                                <input
+                                    type="number"
+                                    value={inputPage}
+                                    onChange={(e) => setInputPage(Number(e.target.value))}
+                                    className="px-2 py-1 w-16 text-center"
+                                    min="1"
+                                    max={totalPages}
+                                />
+                                <button onClick={handlePageChange} className="ml-2 bg-violet-600 text-white px-2 py-1 rounded-lg">
+                                    Go
+                                </button>
+                            </>
+                        ) : (
+                            <div className="pagination-box">
+                                <span
+                                    onClick={() => setIsEditingPage(true)}
+                                    className="cursor-pointer"
+                                >
+                                    {`Page ${currentPage} of ${totalPages}`}
+                                </span>
+                            </div>
+                        )}
+                    </span>
+
                     <button
                         onClick={() => setCurrentPage(currentPage < totalPages ? currentPage + 1 : totalPages)}
                         disabled={currentPage === totalPages}
@@ -108,3 +147,4 @@ const HouseList = () => {
 };
 
 export default HouseList;
+
