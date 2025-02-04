@@ -1,3 +1,30 @@
+/*  
+ *    =============================================================================
+ *            App.css 
+ *                    - Styles the App component with flex layout and animations.
+ *
+ *            Purpose
+ *                    - This file provides the CSS styles for the App component,
+ *                      including the animation for the logo and the layout for the 
+ *                      App header.
+ * 
+ *            Key Components:
+ *                     - App Logo Animation: Rotates the logo with a keyframes animation.
+ *                     - Flexbox Layout: Centers content in the App header.
+ * 
+ *            Algorithms:
+ *                     - Keyframes animation to spin the logo.
+ * 
+ *            Control Flow:
+ *                     - No control flow mechanisms, simple style definitions.
+ * 
+ *            Author: Alleina Abad
+ *            Date: November 16, 2024
+ *            Revised: January 31, 2025
+ *    =============================================================================
+ */
+
+
 .App {
   text-align: center;
 }

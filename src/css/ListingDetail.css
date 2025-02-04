@@ -1,4 +1,27 @@
-/* src/css/ListingDetail.css */
+/*=============================================================================
+        ListingDetail.css
+                - Defines styles for the listing detail page, including the 
+                  image carousel, property details, and navigation buttons.
+
+        Main Responsibilities
+                - Uses modern styling for property detail pages.
+                - Styles the container, images, and text elements.
+                - Provides smooth interactions for carousel navigation.
+
+        Key Components
+                - Listing Detail Container: Creates a card-like section for details.
+                - Image Carousel: Displays property images with navigation arrows.
+                - Navigation Buttons: Styled arrows for carousel interaction.
+
+        Background
+                - This stylesheet is used in property listing detail pages to 
+                  enhance the presentation and navigation experience.
+
+        Programmer: Eliana Ojeda
+        Date: November 25, 2024
+        Revised: January 30, 2025
+
+=============================================================================*/
 .listing-detail-container {
     background-color: white;
     padding: 2rem;
