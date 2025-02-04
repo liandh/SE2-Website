@@ -43,11 +43,11 @@ CORS(app)
 simclr_model, deit_model, clip_model, clip_processor, base_cnn_model = load_models()  # Now unpacking five variables
 
 # Folder paths for images and features
-IMAGE_FOLDER = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\public\images"
-SIMCLR_FEATURES_FILE = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\flask_api\simclr_features.pkl"
-DEIT_FEATURES_FILE = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\flask_api\deit_features.pkl"
-CLIP_FEATURES_FILE = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\flask_api\clip2_features.pkl"
-CNN_FEATURES_FILE = r"D:\Downloads\eliana-portfolio\Real-Estate-Website\flask_api\cnn_features.pkl"
+IMAGE_FOLDER = r"public\images"
+SIMCLR_FEATURES_FILE = r"flask_api\simclr_features.pkl"
+DEIT_FEATURES_FILE = r"flask_api\deit_features.pkl"
+CLIP_FEATURES_FILE = r"flask_api\clip2_features.pkl"
+CNN_FEATURES_FILE = r"flask_api\cnn_features.pkl"
 
 # Ensure image folder exists
 if not os.path.exists(IMAGE_FOLDER):
