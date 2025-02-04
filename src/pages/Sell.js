@@ -93,16 +93,16 @@ const RealEstateListingForm = () => {
   //--------------------------
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-violet-700 via-purple-600 to-pink-500">
+    <div className="min-h-screen bg-gradient-to-b from-[#dfddf7] to-[#ffff]">
       {/* Hero Section */}
-      <header className="relative h-96 bg-cover bg-center" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/violetbg2.JPG)` }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+      <header className="relative h-96 bg-cover bg-center p-5" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/violetbg2.JPG)` }}>
+        <div className="absolute inset-0 opacity-60"></div>
         <div className="container mx-auto text-center relative z-10 pt-32">
-        <h1 className="text-6xl font-bold leading-tight tracking-wide bg-gradient-to-t from-pink-400 via-violet-500 to-blue-700 bg-clip-text text-transparent" 
-          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+        <h1 className="text-6xl font-bold leading-tight tracking-wide text-[#000828]" 
+          style={{ }}>
             Sell Your Property
           </h1>
-          <p className="mt-6 text-2xl font-medium max-w-5xl mx-auto bg-gradient-to-r from-white to-white bg-clip-text text-transparent" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <p className="mt-6 text-2xl font-medium max-w-5xl mx-auto text-[#000828]">
             Fill out the form below to list your property with us and reach potential buyers
           </p>
         </div>
@@ -110,14 +110,16 @@ const RealEstateListingForm = () => {
 
       {/* Form Section */}
       <div className="container mx-auto py-16 px-8">
-        <form onSubmit={handleSubmit} className="bg-white shadow-xl rounded-lg p-8 space-y-6">
-          <h2 className="text-3xl font-semibold text-violet-800 text-center mb-1">Real Estate Listing Form</h2>
-          <hr className="border-t-2 border-violet-700 mx-auto" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="bg-white shadow-xl rounded-3xl space-y-6 opacity-80 pt-10 pb-10">
+          <h2 className="text-3xl font-semibold text-violet-800 text-center m-2">
+            Property Details
+          </h2>
+          <hr className="border-t-1 border-violet-700 mx-auto w-[30%] opacity-50" />
+          <br></br><br></br>
+          <div className="grid grid-cols-2 gap-6 md:m-20 sm:m-10">
             {/* Title */}
-            <div>
-              <label htmlFor="title" className="block text-lg font-medium text-gray-700">Title:</label>
+            <div class="sm: col-span-2 ">
+              <label htmlFor="title" className="block text-lg font-medium text-gray-700">Title</label>
               <input
                 type="text"
                 id="title"
@@ -128,8 +130,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Property Type */}
-            <div>
-              <label htmlFor="propertyType" className="block text-lg font-medium text-gray-700">Property Type:</label>
+            <div class="sm: col-span-2 lg:col-span-1">
+              <label htmlFor="propertyType" className="block text-lg font-medium text-gray-700">
+                Property Type
+              </label>
               <select
                 id="propertyType"
                 className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-violet-500"
@@ -147,8 +151,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Price */}
-            <div>
-              <label htmlFor="price" className="block text-lg font-medium text-gray-700">Price:</label>
+            <div  class="sm: col-span-2 lg:col-span-1">
+              <label htmlFor="price" className="block text-lg font-medium text-gray-700">
+                Price
+              </label>
               <input
                 type="number"
                 id="price"
@@ -160,8 +166,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Address */}
-            <div>
-              <label htmlFor="address" className="block text-lg font-medium text-gray-700">Address:</label>
+            <div  class="sm: col-span-2">
+              <label htmlFor="address" className="block text-lg font-medium text-gray-700">
+                Address
+              </label>
               <input
                 type="text"
                 id="address"
@@ -172,8 +180,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Number of Bedrooms */}
-            <div>
-              <label htmlFor="numBedrooms" className="block text-lg font-medium text-gray-700">Number of Bedrooms:</label>
+            <div class="sm: col-span-2 lg:col-span-1">
+              <label htmlFor="numBedrooms" className="block text-lg font-medium text-gray-700">
+                Number of Bedrooms
+              </label>
               <input
                 type="number"
                 id="numBedrooms"
@@ -185,8 +195,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Number of Bathrooms */}
-            <div>
-              <label htmlFor="numBathrooms" className="block text-lg font-medium text-gray-700">Number of Bathrooms:</label>
+            <div class="sm: col-span-2 lg:col-span-1">
+              <label htmlFor="numBathrooms" className="block text-lg font-medium text-gray-700">
+                Number of Bathrooms
+              </label>
               <input
                 type="number"
                 id="numBathrooms"
@@ -198,8 +210,10 @@ const RealEstateListingForm = () => {
             </div>
 
             {/* Floor Area */}
-            <div>
-              <label htmlFor="floorArea" className="block text-lg font-medium text-gray-700">Floor Area (sq.m.):</label>
+            <div class="sm: col-span-2">
+              <label htmlFor="floorArea" className="block text-lg font-medium text-gray-700">
+                Floor Area (sq.m.)
+              </label>
               <input
                 type="number"
                 id="floorArea"
@@ -211,7 +225,9 @@ const RealEstateListingForm = () => {
 
             {/* Description */}
             <div className="col-span-2">
-              <label htmlFor="description" className="block text-lg font-medium text-gray-700">Description:</label>
+              <label htmlFor="description" className="block text-lg font-medium text-gray-700">
+                Description
+              </label>
               <textarea
                 id="description"
                 className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-violet-500"
@@ -223,7 +239,9 @@ const RealEstateListingForm = () => {
 
             {/* Amenities */}
             <div className="col-span-2">
-              <label htmlFor="amenities" className="block text-lg font-medium text-gray-700">Amenities:</label>
+              <label htmlFor="amenities" className="block text-lg font-medium text-gray-700">
+                Amenities
+              </label>
               <textarea
                 id="amenities"
                 className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-violet-500"
@@ -232,11 +250,10 @@ const RealEstateListingForm = () => {
                 rows="4"
               ></textarea>
             </div>
-          </div>
 
-          {/* Dropzone Section */}
+            {/* Dropzone Section */}
           <div
-            className="dropzone-container border-2 border-dashed border-gray-300 p-6 text-center rounded-lg w-full"
+            className="w-full col-span-2 dropzone-container border-2 border-dashed border-gray-300 p-6 text-center rounded-lg"
             id="dropzone"
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
@@ -244,11 +261,11 @@ const RealEstateListingForm = () => {
           >
             <input
               type="file"
-              className="absolute inset-0 w-full h-full opacity-0 z-50"
+              className="inset-0 w-full opacity-0 z-50"
               onChange={handleFileChange}
               multiple
             />
-            <div>
+            <div className=''>
               <img
                 className="mx-auto h-12 w-12"
                 src="https://www.svgrepo.com/show/357902/image-upload.svg"
@@ -264,7 +281,7 @@ const RealEstateListingForm = () => {
 
             {/* Image Preview */}
             {images.length > 0 && (
-              <div className="mt-4 flex flex-wrap justify-center items-center">
+              <div className="flex flex-wrap justify-center items-center">
                 {images.map((image, index) => (
                   <img key={index} src={image} alt={`Preview ${index}`} className="max-h-40 m-1" />
                 ))}
@@ -272,11 +289,15 @@ const RealEstateListingForm = () => {
             )}
           </div>
 
+          </div>
+
+          
+
           {/* Submit Button */}
           <div className="text-center mt-6">
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-indigo-800 font-semibold text-white rounded-lg hover:bg-violet-800 transition duration-300"
+              className="rounded-3xl w-[80%] py-3 px-6 bg-indigo-800 font-semibold text-white rounded-lg text-xl hover:bg-violet-800 transition duration-300"
             >
               Submit
             </button>
