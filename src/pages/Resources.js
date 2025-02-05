@@ -29,6 +29,13 @@
 
 import React from "react";
 import { FaSearch, FaMapMarkerAlt, FaBuilding, FaBookOpen, FaLink, FaHome, FaHandshake, FaChartLine } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
+import { IoSearch } from "react-icons/io5";
+import { BsHouseDoor } from "react-icons/bs";
+import { MdAttachMoney } from "react-icons/md";
+import Blog1Image from "../assets/images/blogs/Blog1.png";
+import Blog2Image from "../assets/images/blogs/Blog2.png";
+import Blog3Image from "../assets/images/blogs/Blog3.png";
 
 const ResourcesPage = () => {
 
@@ -102,44 +109,149 @@ const ResourcesPage = () => {
         </div>
       </section>
 
-
-
-      {/* Real Estate Guides Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-semibold text-violet-700 mb-6">Real Estate Guides</h2>
-          <p className="text-lg text-gray-600 mb-12">
-            Learn everything you need to know about buying, selling, and investing in real estate in the Philippines.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 bg-white shadow-xl rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
-              <FaBookOpen className="text-5xl text-orange-700 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Buying a Property</h3>
-              <p className="mb-4">
-                A step-by-step guide to buying your dream home or investment property.
-              </p>
-              <a href="https://www.lamudi.com.ph/buying-guide" className="text-blue-600 hover:underline">Read More</a>
+      <section>
+        <div className="relative w-full bg-[#3a0ca3] py-16"> {/* Added padding, removed fixed width */}
+          <div className="container mx-auto"> 
+            
+            {/* Headline */}
+            <div className="text-center">
+              <div className="WhatSTrending text-white text-xl font-medium font-['Poppins'] uppercase tracking-[2.91px] mb-4">WHAT’S TRENDING</div>
+              <div className="LatestBlogsPosts text-white text-[39.80px] font-semibold font-['Poppins'] leading-[47px] mb-16">Latest Blogs & Posts</div> {/* Added margin */}
             </div>
-            <div className="p-8 bg-white shadow-xl rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
-              <FaHandshake className="text-5xl text-green-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Selling a Property</h3>
-              <p className="mb-4">
-                Tips and tricks to sell your property quickly and at the best price.
-              </p>
-              <a href="https://www.property24.com.ph/selling-guide" className="text-blue-600 hover:underline">Read More</a>
-            </div>
-            <div className="p-8 bg-white shadow-xl rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
-              <FaChartLine className="text-5xl text-blue-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Real Estate Investing</h3>
-              <p className="mb-4">
-                Learn how to make smart real estate investments in the Philippines.
-              </p>
-              <a href="https://www.dotproperty.com.ph/investment-guide" className="text-blue-600 hover:underline">Read More</a>
+
+            {/* Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="relative ">
+                <a href="https://www.rocketmortgage.com/learn/first-time-home-buyer-mistakes" className="card-link block h-full">
+                <div className="absolute top-4 left-4 bg-white rounded-bl-[10px] rounded-br-[10px] shadow-[4px_4px_15px_0px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center px-2"> {/* Date badge */}
+                  <div className="text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">28</div>
+                  <div className="text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">Tue</div>
+                </div>
+                <img src = {Blog1Image}/> 
+                <div className="p-6 relative">
+                    <div className="text-white text-[27.60px] font-medium font-['Poppins'] mb-4">
+                      Top 13 Home Buying Mistakes to Avoid</div>
+                    <div className=" text-neutral-300 text-base font-normal font-['Poppins'] leading-relaxed mb-16">
+                      Avoid common home buying pitfalls with research and planning.
+                    </div> {/* Added margin bottom for button spacing */}
+                    <div className="absolute bottom-4 right-4"> {/* Round button */}
+                        <a href="https://www.rocketmortgage.com/learn/first-time-home-buyer-mistakes" className="w-12 h-12 bg-white rounded-full border border-[#3a0ca3] flex items-center justify-center">
+                          <GoArrowRight className="text-xl"/>
+                        </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div className="relative ">
+                <a href="https://www.investopedia.com/articles/mortgages-real-estate/08/staging-home.asp" className="card-link block h-full">
+                <div className="absolute top-4 left-4 bg-white rounded-bl-[10px] rounded-br-[10px] shadow-[4px_4px_15px_0px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center px-2"> {/* Date badge */}
+                  <div className="text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">28</div>
+                  <div className="text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">Tue</div>
+                </div>
+                <img src = {Blog2Image}/> 
+                <div className="p-6 relative">
+                    <div className="text-white text-[27.60px] font-medium font-['Poppins'] mb-4">
+                    How to Stage Your Home for a Quick Sale</div>
+                    <div className=" text-neutral-300 text-base font-normal font-['Poppins'] leading-relaxed mb-16">
+                    Moves that have the greatest impact when you’re short on time and money
+                    </div> {/* Added margin bottom for button spacing */}
+                    <div className="absolute bottom-4 right-4"> {/* Round button */}
+                        <a href="https://www.investopedia.com/articles/mortgages-real-estate/08/staging-home.asp" className="w-12 h-12 bg-white rounded-full border border-[#3a0ca3] flex items-center justify-center">
+                          <GoArrowRight className="text-xl"/>
+                        </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div className="relative ">
+                <a href="https://www.bankrate.com/real-estate/tips-for-selling-home/" className="card-link block h-full">
+                <div className="absolute top-4 left-4 bg-white rounded-bl-[10px] rounded-br-[10px] shadow-[4px_4px_15px_0px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center px-2"> {/* Date badge */}
+                  <div className="text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">28</div>
+                  <div className="text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">Tue</div>
+                </div>
+                <img src = {Blog3Image}/> 
+                <div className="p-6 relative">
+                    <div className="text-white text-[27.60px] font-medium font-['Poppins'] mb-4">
+                    1o Tips to Sell Your Home for More Money</div>
+                    <div className=" text-neutral-300 text-base font-normal font-['Poppins'] leading-relaxed mb-16">
+                    10 tips from realtors to increase your selling price.
+                    </div> {/* Added margin bottom for button spacing */}
+                    <div className="absolute bottom-4 right-4"> {/* Round button */}
+                        <a href="https://www.bankrate.com/real-estate/tips-for-selling-home/" className="w-12 h-12 bg-white rounded-full border border-[#3a0ca3] flex items-center justify-center">
+                          <GoArrowRight className="text-xl"/>
+                        </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
 
+       {/* Rea; Estate Property Guides */}
+      <section>
+        <div className="relative w-full container mx-auto "> {/* Container for everything, w-full for responsiveness */}
+
+          <div className="text-center mt-16"> {/* Added margin top for spacing */}
+            <div data-layer="Guides" className="text-[#2b2b2b] text-xl font-medium font-['Poppins'] tracking-[2.91px] mb-4">
+              LEARN MORE</div> {/* Added margin bottom */}
+            <div className="text-[#0b090a] text-[39.80px] font-semibold font-['Poppins'] leading-[47px]">
+              Real Estate Property Guides</div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-center gap-8 mt-16 px-4">
+            <div data-layer="Group 47" className="w-[340px] h-[363px] relative">
+            <a href="" className="w-[340px] h-[363px] relative block">
+              <div data-layer="Rectangle 17" className="Rectangle17 absolute inset-0 bg-white rounded-[30px] shadow-[4px_10px_30px_0px_rgba(0,0,0,0.03)]"></div> {/* inset-0 */}
+              <div className="relative w-[90px] h-[90px] left-1/2 -translate-x-1/2 top-[60px] bg-[#4361ee] rounded-full shadow-[4px_10px_30px_0px_rgba(67,97,238,0.40)] flex items-center justify-center">
+                <IoSearch className="text-white text-3xl" />
+              </div>
+              <div data-layer="Buying a Property" className="absolute top-[180px] left-1/2 -translate-x-1/2 text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">
+              Buy a Property</div> {/* Centered text */}
+              <div data-layer="A step-by-step guide to buying your dream home or investment property." 
+              className="absolute w-[220px] left-1/2 -translate-x-1/2 top-[214px] text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">
+              A step-by-step guide to buying your dream home or investment property.</div>
+              </a>
+            </div>
+
+            {/* Repeat the above structure for Group 51 and Group 52 */}
+            <div data-layer="Group 51" className="w-[340px] h-[363px] relative">
+               <a href="https://ownpropertyabroad.com/philippines/how-to-sell-property-in-the-philippines/" className="w-[340px] h-[363px] relative block">
+                <div data-layer="Rectangle 17" className="Rectangle17 absolute inset-0 bg-white rounded-[30px] shadow-[4px_10px_30px_0px_rgba(0,0,0,0.03)]"></div>
+                <div className="relative w-[90px] h-[90px] left-1/2 -translate-x-1/2 top-[60px] bg-[#4361ee] rounded-full shadow-[4px_10px_30px_0px_rgba(67,97,238,0.40)] flex items-center justify-center">
+                  <BsHouseDoor className="text-white text-3xl" />
+                </div>
+                <div data-layer="Sell a Property" className="SellAHouse absolute top-[180px] left-1/2 -translate-x-1/2 text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">
+                
+                  Sell a Property
+                </div>
+                <div data-layer="Tips and tricks to sell your property quickly and at the best price." className="absolute w-[220px] left-1/2 -translate-x-1/2 top-[214px] text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">
+                  Tips and tricks to sell your property quickly and at the best price.
+                </div>
+                </a>
+              </div>
+
+
+              <div data-layer="Group 52" className="w-[340px] h-[363px] relative">
+              <a href="https://www.rcbc.com/how-to-invest-in-real-estate-in-the-philippines" className="w-[340px] h-[363px] relative block">
+                <div data-layer="Rectangle 17" className="Rectangle17 absolute inset-0 bg-white rounded-[30px] shadow-[4px_10px_30px_0px_rgba(0,0,0,0.03)]"></div>
+                <div className="relative w-[90px] h-[90px] left-1/2 -translate-x-1/2 top-[60px] bg-[#4361ee] rounded-full shadow-[4px_10px_30px_0px_rgba(67,97,238,0.40)] flex items-center justify-center">
+                <MdAttachMoney className="text-white text-3xl" />
+              </div>
+                <div data-layer="Real Estate Investing" className="RentAHouse absolute top-[180px] left-1/2 -translate-x-1/2 text-center text-[#2b2b2b] text-xl font-medium font-['Poppins']">
+                  Invest a Property</div>
+                <div data-layer="Learn how to make smart real estate investments in the Philippines." className="DonecPorttitorEuismodDignissimNullamALaciniaIpsumNecDignissimPurus absolute w-[220px] left-1/2 -translate-x-1/2 top-[214px] text-center text-[#808080] text-base font-normal font-['Poppins'] leading-relaxed">
+                  Learn how to make smart real estate investments in the Philippines.
+                </div>
+                </a>
+              </div>
+          </div>
+        </div>
+      </section>
       
 
       {/* Helpful Links Section */}
